@@ -167,7 +167,7 @@ pip-log.txt
 assets/
 articles/
 protected/runtime/
-protected/config/
+##protected/config/
 protected/extensions/
 protected/temp/
 protected/libs/
