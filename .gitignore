@@ -176,7 +176,6 @@ protected/migrations/
 protected/data/images/
 protected/data/up_files/
 protected/data/files
-images/
 css/jqueryui/
 css/custom-theme/
 js/tiny_mce/

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">		
 <meta name="language" content="pt-BR" />
 
-	<!--[if lt IE 9]>
+	<!--[if  IE 9]>
 
  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
@@ -21,6 +21,10 @@
    })();
 </script>
 <![endif]-->
+
+	 <!-- Fav Icons -->
+  	<link rel="icon" type="image/x-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.png" /> 
+  	<link rel="shortcut icon" type="image/x-icon"  href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.png" />
 
 		<!--  CSS -->
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/minimalism.css" />
@@ -112,7 +116,7 @@
 <div class="sixcol">	
 <nav>
    <ul> <!-- Menu -->
-   		<li><?php echo CHtml::link(CHtml::encode("Home"), array("/home"), array("class"=>"aba-href", "id"=>'home'));?></li>
+   		<li><?php echo CHtml::link(CHtml::encode("Home"), array("/home/index"), array("class"=>"aba-href", "id"=>'home'));?></li>
    <?php foreach($paginas as $p):?>
      	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("pagina/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
     <?php endforeach;?>
@@ -131,7 +135,7 @@
 <!--start footer-->
 
    <footer>
-      <div class="container">
+      <div class="container custom-footer">
           <div id="FooterTwo">
           <?php if(Yii::app()->user->isGuest):?>
 				<?php echo CHtml::link("Login", array("site/login"));?>
