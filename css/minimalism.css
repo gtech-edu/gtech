@@ -59,7 +59,7 @@ body{
 	color:#575757;
 	margin:0 0 1px; height:100%; 
 	line-height: 1.7;
-	border-top:10px solid #002700;
+	border-top:10px solid #0D8A43;
 
 
 
@@ -389,12 +389,13 @@ nav ul li a{
 
 }
 nav ul li a:hover{
-	color:#CC3333;
+	/* color:#CC3333; */
+	color: #008900;
 
 }
 
 nav ul li a.current{
-	color:#CC3333;
+	color: #008900;
 
 }
 
@@ -428,7 +429,7 @@ nav ul li a.current{
 
 	}
 	
-.content_menu ul li a:hover{	color:#FF8200;}
+.content_menu ul li a:hover{	color: #008900;}
 
 
 /***************************************************

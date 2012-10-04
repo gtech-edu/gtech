@@ -22,10 +22,15 @@
 </script>
 <![endif]-->
 
-	<!--  CSS -->
+		<!--  CSS -->
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/minimalism.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+
+		<!-- User Styles -->
+		<link href="<?php echo Yii::app()->request->baseUrl;?>/css/main.less" rel="stylesheet/less">
+  		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/elements.less" rel="stylesheet/less">
+
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 		<!-- The 1140px Grid - http://cssgrid.net/ -->
@@ -33,11 +38,7 @@
 	
 	<!-- Scripts -->
 	
-		<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaqueries.js"></script>
 		
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
 	
 	<title><?php echo CHtml::encode("GTech"); ?></title>
 <?php 
@@ -105,7 +106,7 @@
 <header>
 		<!-- Start logo -->
 		<a href="#" id="logo">
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gtech.png" width="212" height="62" alt="logo">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gtech.png" alt="logo">
 		</a><br>
 		<!-- end logo -->
 <div class="sixcol">	
@@ -147,5 +148,11 @@
    </footer>
    <!--end footer-->
 </div><!-- end bg -->
+
+<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaqueries.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
 </body>
 </html>

@@ -32,11 +32,6 @@ class SiteController extends Controller
 		$this->redirect(array('/home'));
 		
 	}
-	
-	public function actionEquipe(){
-		
-		$this->redirect(array('/pagina/view', 'id'=>12));
-	}
 
 	/**
 	 * This is the action to handle external exceptions.

@@ -16,10 +16,6 @@ function filebrowser(field_name, url, type, win) {
 		input : field_name
 	});		
 }
-
-function saveConfirm(){
-//	confirm('Voce fez alteracoes');
-}
 </script>
 <!--start intro-->
 <div class="container">
@@ -46,8 +42,6 @@ function saveConfirm(){
 							'htmlOptions'=>array('cols'=>40,'rows'=>80),
 						    'name'=>'Pagina[conteudo]',
 						    'editorTemplate'=>'full',
-							//'onchangeCallback'=>'saveConfirm',
-							//'contentCSS'=>Yii::app()->request->baseUrl .'/css/minimalism.css',
 						 	'value'=>$conteudo,
 							)); ?>
 	</div>

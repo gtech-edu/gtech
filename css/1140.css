@@ -152,7 +152,8 @@ body {
 	}
 	
 header{
-        height:70px;
+         height:70px; 
+
 }
 
 
@@ -293,7 +294,7 @@ h1{
 	
    header{
 /*	   height:360px;*/
-	   height:180px;	
+	   height:360px;	
 	   border:none;
    }
    
