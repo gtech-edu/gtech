@@ -37,10 +37,11 @@ $this->breadcrumbs=array(
    </section>
 
 			
-<div class="holder_content">
+<div class="holder_content content-holder">
 
 <div class="fourcol">
 <section class="group1">
+
 	<?php 
 		echo  $colunm_left; 
 		
@@ -49,6 +50,7 @@ $this->breadcrumbs=array(
 			echo CHtml::link("Editar", array("/home/updateLeft"), array("class"=>"button"));
 	}
 	?>
+
 </section>
 </div>
 
