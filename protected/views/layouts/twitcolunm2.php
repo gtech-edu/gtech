@@ -1,7 +1,8 @@
-<?php $this->beginContent('//layouts/main'); ?>
-<div class="container">
-<div class="row">
+<?php $this->beginContent('//layouts/twitter-main'); ?>
+	<div class="span9">
 		<?php echo $content; ?>
+	</div>
+	<div class="span3 sidebar">
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>'Operações',
@@ -14,5 +15,4 @@
 			$this->endWidget();
 		?>
 	</div><!-- sidebar -->
-</div>
 <?php $this->endContent(); ?>

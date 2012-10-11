@@ -5,6 +5,9 @@ class HomeController extends Controller
 		/**
 	 * @return array action filters
 	 */
+		public $layout='//layouts/twitcolumn1';
+
+
 	public function filters()
 	{
 		return array(
@@ -58,7 +61,7 @@ class HomeController extends Controller
 		//Carrega conteudo do header	
 		$header = file_get_contents($dir .DIRECTORY_SEPARATOR ."_header.html");
 		
-		$this->render('index', array(
+		$this->render('twitindex', array(
 						  'header'=>$header,	
 						  'colunm_left'=>$colunm_left,
 						  'colunm_center'=>$colunm_center,
