@@ -260,35 +260,32 @@ footer{
 /***************************************************
 				       MENU
 ***************************************************/
-.nav-cont{
-
-	 vertical-align: middle;
- display: table-cell;
-}
 
 nav{
 	border-top:1px solid #A3A3A3;
 	border-bottom:1px solid #A3A3A3;
+
+    padding-bottom:5px;
+	padding-top:5px;
+	margin-top:5px;
+	margin-right:6px;
 }
 
 
 nav ul li{
-	line-height:normal;
-	display: inline-block;
+	
+	 display: inline-block; 
+
 }
 
 nav ul li a{
 	font-size: 20px;
 	font-family:'OpenSansRegular', Arial, sans-serif;
 	color:#666666;
-	font-weight:normal;
-	padding-bottom:10px;
-	padding-top:5px;
-	background-color:transparent;
-	margin-top:5px;
-	margin-right:6px;
+	font-weight:normal;	
+	background-color:transparent;	
     text-decoration:none;
-
+    margin-right:6px;
 
 }
 nav ul li a:hover{

@@ -6,7 +6,7 @@ class PaginaController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/twitcolumn1';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -99,6 +99,8 @@ class PaginaController extends Controller
 	{
 		$model=new Pagina;
 
+		$model->lang = Yii::app()->language;
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -130,6 +132,8 @@ class PaginaController extends Controller
 		if(isset($_POST['Pagina']))
 		{
 			$model->attributes=$_POST['Pagina'];
+			$model->lang = Yii::app()->language;
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->cod_pagina));
 				$this->redirect(array('view','id'=>1));

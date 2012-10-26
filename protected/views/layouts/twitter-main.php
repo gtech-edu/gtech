@@ -1,8 +1,7 @@
-<html lang="pt-BR">
+<html lang="<?php echo Yii::app()->language ?>">
 <head>
 
 <meta charset="UTF-8">		
-<meta name="language" content="pt-BR" />
 
 	<!--[if  IE 9]>
 
@@ -44,35 +43,7 @@
 		 }
 ?>	
 	
-	<script type="text/javascript">
-			$(function(){
-			
-				$('.aba-href').hover(
-					function() { $(this).addClass('current'); }, 
-					function() {
-						 id = <?php echo $id_pagina;?>;
-						 $(this).removeClass('current');
-						 $("#" + id).addClass('current');
-
-					 }
-				);
-				
-			});
-		</script>
-		
-<!-- Google Analytics -->
-<script type="text/javascript">		
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30933094-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-		
+	
 <?php 
 			Yii::app()->clientScript->registerScript('abas', "	
 		
@@ -91,15 +62,16 @@
 </head>
 
 <body>
-<div class="bg">
+
 
 <!--start header-->
 <div id="containerfluid">
+
 <div class="row-fluid">
 				
 <?php $paginas = Pagina::model()->findAll(array('order'=>'cod_pagina'));?>
-<div class="navbar">
 
+<div class="navbar">
 	<div class="span5">
 		<!-- Start logo -->
 		<a href="#" id="logo2">
@@ -111,12 +83,23 @@
 
 		<nav>
 		   <ul> <!-- Menu -->
+
+		   	<?php
+			 	$enFlag = CHtml::image(Yii::app()->request->baseUrl .'/images/british_flag.png', '', array('width'=>25, 'height'=>'25'));
+			 	$ptFlag = CHtml::image(Yii::app()->request->baseUrl .'/images/brazil-flag.png', '', array('width'=>25, 'height'=>'25'));
+			 ?>	
+			 <?php if(Yii::app()->language == 'pt'): ?>
+			 	<li><?php echo CHtml::link($enFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'en'))); ?></li>
+			<?php elseif (Yii::app()->language == 'en') : ?>				
+				<li><?php echo CHtml::link($ptFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'pt'))); ?></li>
+			<?php endif; ?>			
+
+
+
 		   		<li><?php echo CHtml::link(CHtml::encode("Home"), array("/home/index"), array("class"=>"aba-href", "id"=>'home'));?></li>
 			   <?php foreach($paginas as $p):?>
 			     	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("pagina/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
 			    <?php endforeach;?>
-		    <li class="pull-right"><a href="http://gtech.ufrgs.br/en" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/british_flag.png" width="25" height="25"></a></li>
-		    <li class="clear-fix"></li>
 		</ul> 
 		</nav>
 	</div>
@@ -154,12 +137,36 @@
 	</div>
    </footer>
    <!--end footer-->
-</div><!-- end bg -->
-
-<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaqueries.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>		
 		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			
+				$('.aba-href').hover(
+					function() { $(this).addClass('current'); }, 
+					function() {
+						 id = <?php echo $id_pagina;?>;
+						 $(this).removeClass('current');
+						 $("#" + id).addClass('current');
+
+					 }
+				);
+				
+			});
+		</script>
+		
+<!-- Google Analytics -->
+<script type="text/javascript">		
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30933094-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+		
 </body>
 </html>

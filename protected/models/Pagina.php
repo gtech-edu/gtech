@@ -102,4 +102,40 @@ class Pagina extends CActiveRecord
 	return $menuServicos;
 		
 	}
+
+
+	/**
+	 * define o escopo padrão do objeto - neste caso, usamos para definir a linguagem padrão
+	 * (non-PHPdoc)
+	 * @see CActiveRecord::defaultScope()
+	 */
+	 
+	public function defaultScope(){
+		
+		return array(
+			'condition'=>'t.lang=:lang',
+			'params'=>array(':lang'=>Yii::app()->language),
+		);
+	}
+	
+	/**
+	 * Seta uma determinada linguagem para os objetos
+	 * ex: Publicacao::model()->lang('en')->findAll()
+	 * @param $lang
+	 */
+	 
+	public function lang($lang){
+		
+		$this->getDbCriteria()->mergeWith(array(
+			'condition'=>'tlang=:lang',
+			'params'=>array(':lang'=>$lang),
+		));
+		
+		return $this;
+	}
+	
+
+
+
 }
+

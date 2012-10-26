@@ -5,7 +5,7 @@ class HomeController extends Controller
 		/**
 	 * @return array action filters
 	 */
-		public $layout='//layouts/twitcolumn1';
+		public $layout='//layouts/column2';
 
 
 	public function filters()
@@ -50,10 +50,11 @@ class HomeController extends Controller
 	{	
 		
 		//Caminho para arquivos das páginas estáticas
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language );
+
 		
 		//Carrega conteudo da coluna esquerda
-		$colunm_left = file_get_contents($dir .DIRECTORY_SEPARATOR ."_colunm-left.html");
+		$colunm_left = file_get_contents($dir .DIRECTORY_SEPARATOR  ."_colunm-left.html");
 		//Carrega conteudo da coluna central
 		$colunm_center = file_get_contents($dir .DIRECTORY_SEPARATOR ."_colunm-center.html");
 		//Carrega conteudo da coluna direita
@@ -61,7 +62,7 @@ class HomeController extends Controller
 		//Carrega conteudo do header	
 		$header = file_get_contents($dir .DIRECTORY_SEPARATOR ."_header.html");
 		
-		$this->render('twitindex', array(
+		$this->render('index', array(
 						  'header'=>$header,	
 						  'colunm_left'=>$colunm_left,
 						  'colunm_center'=>$colunm_center,
