@@ -77,7 +77,7 @@ class HomeController extends Controller
 	public function actionUpdateLeft()
 	{
 		//Pasta para arquivo
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 		//local do arquivo
 		$file = $dir .DIRECTORY_SEPARATOR ."_colunm-left.html";
 		
@@ -94,7 +94,7 @@ class HomeController extends Controller
 				$this->redirect(array('/home/index')); //Redireciona para pagina principal
 			
 		}
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 
 		$this->render('_form',array(
 			'conteudo'=>$colunm_left,
@@ -109,7 +109,7 @@ class HomeController extends Controller
 	public function actionUpdateCenter()
 	{
 		//Pasta para arquivo
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 		//local do arquivo
 		$file = $dir .DIRECTORY_SEPARATOR ."_colunm-center.html";
 		
@@ -126,7 +126,7 @@ class HomeController extends Controller
 				$this->redirect(array('/home/index')); //Redireciona para pagina principal
 			
 		}
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 
 		$this->render('_form',array(
 			'conteudo'=>$colunm_center,
@@ -141,7 +141,7 @@ class HomeController extends Controller
 	public function actionUpdateRight()
 	{
 		//Pasta para arquivo
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 		//local do arquivo
 		$file = $dir .DIRECTORY_SEPARATOR ."_colunm-right.html";
 		
@@ -173,7 +173,7 @@ class HomeController extends Controller
 	public function actionUpdateHeader()
 	{
 		//Pasta para arquivo
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 		//local do arquivo
 		$file = $dir .DIRECTORY_SEPARATOR ."_header.html";
 		
@@ -194,7 +194,7 @@ class HomeController extends Controller
 				$this->redirect(array('/home/index')); //Redireciona para pagina principal
 			
 		}
-		$dir = Yii::getPathOfAlias('application.data.pages');
+		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 
 		$this->render('_form',array(
 			'conteudo'=>$header_text,
