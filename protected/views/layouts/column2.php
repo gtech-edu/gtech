@@ -1,7 +1,9 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="container">
 <div class="row">
+		
 		<?php echo $content; ?>
+	
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
 				'title'=>'Operações',

@@ -37,7 +37,7 @@ $this->breadcrumbs=array(
 <div class="container">
 <div class="row">	
 		
-<div class="holder_content">
+<div class="holder_content content-holder">
  
 <div class="twelvecol last">
 <section class="group-unique">

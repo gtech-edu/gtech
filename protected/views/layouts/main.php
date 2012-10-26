@@ -113,6 +113,11 @@
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gtech.png" alt="logo">
 		</a><br>
 		<!-- end logo -->
+
+<?php //Imagens das bandeiras
+			 	$enFlag = CHtml::image(Yii::app()->request->baseUrl .'/images/british_flag.png', '', array('width'=>25, 'height'=>'25'));
+			 	$ptFlag = CHtml::image(Yii::app()->request->baseUrl .'/images/brazil-flag.png', '', array('width'=>25, 'height'=>'25'));
+ ?>	
 <div class="sixcol">	
 <nav>
    <ul> <!-- Menu -->
@@ -120,7 +125,13 @@
    <?php foreach($paginas as $p):?>
      	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("pagina/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
     <?php endforeach;?>
-    <li style="float: right"><a href="http://gtech.ufrgs.br/en" ><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/british_flag.png" width="25" height="25"></a></li>
+    
+    <!-- Link para a página em outra língua -->
+     <?php if(Yii::app()->language == 'pt'):  //Link e bandeira para a página em inglês ?>
+	 	<li style="float: right"><?php echo CHtml::link($enFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'en'))); ?></li>
+	<?php elseif (Yii::app()->language == 'en') :  //Link e bandeira para a página em português ?>				
+		<li style="float: right"><?php echo CHtml::link($ptFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'pt'))); ?></li>
+	<?php endif; ?>	
 </ul> 
 </nav>
 </div>
@@ -155,8 +166,7 @@
 
 <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaqueries.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>		
 		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
 </body>
 </html>
