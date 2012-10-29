@@ -4,8 +4,9 @@
 <meta charset="UTF-8">		
 <meta name="language" content="pt-BR" />
   
-    <!--[if (IE 7)|(IE 8)]>
+    <!--[if (IE 7)|(IE 8)| (IE 9)]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/style_ie.css" />
 <script>
    (function() {
       var link = document.createElement("link");
