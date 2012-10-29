@@ -1,3 +1,17 @@
+<?php
+Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl ."/js/tiny_mce/tiny_mce.js");
+Yii::app()->clientScript->registerScript('text-areas',"
+		tinyMCE.init({
+								mode : 'textareas',
+								theme : 'advanced',
+								width: '100%',
+        						height: '450',
+        						relative_urls : false,
+        						file_browser_callback : 'filebrowser',
+							});
+	");
+?>
+
 <script type="text/javascript">
 function filebrowser(field_name, url, type, win) {
 	
@@ -33,7 +47,7 @@ function saveConfirm(){
 </div>
 <!--end intro-->   
 
-<div class="form">
+<div class="form holder_content">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'pagina-form',
@@ -41,15 +55,7 @@ function saveConfirm(){
 )); ?>
 
 	<div class="row">
-		<?php $this->widget('application.extensions.tinymce.ETinyMce',
-							array(
-							'htmlOptions'=>array('cols'=>40,'rows'=>80),
-						    'name'=>'Pagina[conteudo]',
-						    'editorTemplate'=>'full',
-							//'onchangeCallback'=>'saveConfirm',
-							//'contentCSS'=>Yii::app()->request->baseUrl .'/css/minimalism.css',
-						 	'value'=>$conteudo,
-							)); ?>
+	 <?php echo CHtml::textArea('Paginga[conteudo]', $conteudo, array('id'=>'Paginga_conteudo')); ?>
 	</div>
 
 	<div class="row buttons">
