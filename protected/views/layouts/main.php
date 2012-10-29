@@ -3,12 +3,6 @@
 
 <meta charset="UTF-8">		
 <meta name="language" content="pt-BR" />
-
-	<!--[if  IE 9]>
-
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-
-  <![endif]-->
   
     <!--[if (IE 7)|(IE 8)]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,8 +25,11 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 		<!-- User Styles -->
+		<?php /*
 		<link href="<?php echo Yii::app()->request->baseUrl;?>/css/main.less" rel="stylesheet/less">
   		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/elements.less" rel="stylesheet/less">
+  		*/ ?>
+  		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -166,7 +163,7 @@
 
 <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaqueries.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script>		
+		<?php /* <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/less.js"></script> */ ?>		
 		<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
 </body>
 </html>

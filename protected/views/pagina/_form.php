@@ -7,7 +7,7 @@ Yii::app()->clientScript->registerScript('text-areas',"
 								width: '100%',
         						height: '450',
         						relative_urls : false,
-        						file_browser_callback : 'filebrowser',
+        						file_browser_callback : 'filebrowser'
 							});
 	");
 ?>
