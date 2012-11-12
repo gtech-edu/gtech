@@ -34,3 +34,13 @@ input.checkbox, input.radio {position:relative;top:.25em;}
 form.inline div, form.inline p {vertical-align:middle;}
 form.inline input.checkbox, form.inline input.radio, form.inline input.button, form.inline button {margin:0.5em 0;}
 button, input.button {position:relative;top:0.25em;}
+
+.row {
+width: 100%;
+max-width: 980px;
+min-width: 755px;
+margin: 0 auto;
+overflow: visible;
+}
+
+footer{background:#000000;background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #003700), color-stop(1, #0d8343));background:-ms-linear-gradient(bottom, #003700, #0d8343);background:-moz-linear-gradient(center bottom, #003700 0%, #0d8343 100%);}

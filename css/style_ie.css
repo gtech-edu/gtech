@@ -100,7 +100,7 @@ h1{
  h1 span{
 	font-size: 25px;
 	line-height: 12px;
-	color:##666666;
+	color:#666666;
 	margin-left:10px;
 	font-family:'OpenSansLightItalic';
 
@@ -235,7 +235,7 @@ header{
 	width:100%;
 	position: relative;
 	float: left;
-/*	height:120px;*/
+	height:120px;
 	background:transparent;
 	margin-top:25px;
 
@@ -300,14 +300,23 @@ header{
 			        FOOTER
 ***************************************************/
 
+
 footer{
 	position:relative;
 	height:90px;
 	clear:both;
 	width:100%;
+	
 	background-image:url(../images/footer.png);
 	background-position:left top;
 	background-repeat:repeat-x;
+	
+
+	background:#0d8343;
+	background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #003700), color-stop(1, #0d8343));
+	background:-ms-linear-gradient(bottom, #003700, #0d8343);
+	background:-moz-linear-gradient(center bottom, #003700 0%, #0d8343 100%);
+
 	margin-bottom:18px;
 	background-color:black;
 
@@ -477,8 +486,8 @@ nav ul li a.current{
 
 
 
- *			FONT-FACE	      */
-
+ /*			FONT-FACE	      */
+/*
 
 @font-face {
     font-family: 'OpenSansLight';
@@ -599,5 +608,8 @@ nav ul li a.current{
     font-style: normal;
 
 }
+*/
 
-
+/*
+footer{background:#000000;background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #003700), color-stop(1, #0d8343));background:-ms-linear-gradient(bottom, #003700, #0d8343);background:-moz-linear-gradient(center bottom, #003700 0%, #0d8343 100%);}
+*/

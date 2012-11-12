@@ -60,7 +60,7 @@ function filebrowser(field_name, url, type, win) {
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::button('Cancelar', array('submit' => array('/pagina/view', 'id'=>$model->cod_pagina))); ?>
+		<?php echo CHtml::button('Cancelar', array('submit' => array('/p/view', 'id'=>$model->cod_pagina))); ?>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Adicionar' : 'Salvar'); ?>
 	</div>
 

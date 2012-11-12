@@ -1,6 +1,12 @@
 /* ==================================================================================================================== */
 /* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
 /* ==================================================================================================================== */
+nav{
+        margin:30px 0px 0 0px; 
+        
+        
+
+}
 
 .container {
 padding-left: 20px;
@@ -87,6 +93,13 @@ img {
 	height: auto;
 }
 
+#country-flag{
+	float: right;
+}
+
+h1{
+	font-size: 25px;
+}
 
 
 
@@ -97,7 +110,12 @@ body {
 	line-height: 1.5em;
 	}
 	
-		
+	
+#img-gtech	{	
+	width: 100px;
+}
+
+
 #FooterTwo{
 	position: absolute;
 	left:120px;
@@ -115,6 +133,10 @@ body {
 	font-size:15px;
 
 }
+
+#country-flag{
+	float: right;
+}
 		
 		
 }
@@ -128,7 +150,6 @@ body {
 	-webkit-text-size-adjust: none;
 	
 	}
-	
 	
 .row, body, .container {
 	width: 100%;
@@ -149,7 +170,7 @@ body {
 	margin-right: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
-	}
+}
 	
 header{
          height:70px; 
@@ -158,7 +179,7 @@ header{
 
 
 nav{
-        margin:-12px 24px 0 20px; 
+        margin:5px 24px 0 20px; 
         width:94%; 
         top:100px;
 
@@ -190,6 +211,7 @@ nav{
 #logo{
 	left:264px;
 	top:10px;
+	border-bottom: 10px;
 
 }
 	
@@ -205,7 +227,7 @@ footer{
 	background-position:left top;
 	background-repeat:repeat-x;
 	margin-bottom:18px;
-	background-color:black;
+	background-color:#0d8343;
 
 	
 	
@@ -284,29 +306,29 @@ h1{
 	top: 1px;
 }
 
-
+#country-flag{
+	float: right;
+}
   
 
 }
 
 
-@media handheld, only screen and (max-width: 480px) {
+@media handheld, only screen and (max-width: 510px) {
 	
    header{
 /*	   height:360px;*/
 	   height:360px;	
-	   border:none;
+	   border: none;
    }
-   
-
    
 nav{
 	float: left;
-	margin-top:-26px;
+	margin-top:-16px;
 	left:-16px;
 	border:none;
 
-
+	margin-bottom: 100px;
 	}
 	
 nav ul{	
@@ -343,10 +365,7 @@ nav ul li a.current{
 }
 
 #intro{
-	 margin-top:70px;
-	
-
-	  
+	 margin-top:200px;	  
   }
   
 h1{
@@ -359,9 +378,9 @@ h1{
   
 	   
 #logo{
-	left:12px;
-	top:12px;
-
+	
+	left:145px;
+	top:12px;	
 }
 
   
@@ -379,7 +398,9 @@ h1{
   
   
 	
-a#logo img{width:100%;}
+a#logo img{width:100%;
+	
+}
 
 	
 #FooterTwo{
@@ -456,7 +477,9 @@ a#logo img{width:100%;}
 	top: 1px;
 }
 
-
+#country-flag{
+	float: none;
+}
 
 
 }
@@ -467,13 +490,13 @@ a#logo img{width:100%;}
 	
 header{
 /*	   height:350px;*/
-	   height:180px;
+	   height:350px;
 	   border:none;
    }
    
 nav{
 	float: left;
-	margin-top:-33px;
+	margin-top:-20px;
 	left:-16px;
 	border:none;
 
@@ -500,15 +523,11 @@ nav ul li a{
 	text-decoration:none;
 	border-bottom:1px solid #A3A3A3;
 	
-
 	}
 
 	
-#intro{
-	  	margin-top:70px;
-	
-
-	  
+#intro{	  	
+	  	margin-top:200px;	  
   }
   
 h1{
@@ -521,8 +540,9 @@ h1{
   
 	   
 #logo{
-	left:12px;
+	left:70px;
 	top:8px;
+	border-bottom: 10px;
 
 }
 
@@ -634,7 +654,9 @@ footer{
 	top: 1px;
 }
 
-
+#country-flag{
+	float: none;
+}
 
 }
 
@@ -643,14 +665,14 @@ footer{
  @media handheld, only screen and (max-width: 280px) {
 	
 header{
-/*	   height:350px;*/
-	   height:180px;
+	   height:350px;
+/*	   height:180px; */
 	   border:none;
    }
    
 nav{
 	float: left;
-	margin-top:-33px;
+	margin-top:-10px;	
 	left:-16px;
 	border:none;
 
@@ -681,11 +703,12 @@ nav ul li a{
 	}
 
 	
-#intro{
-	  	margin-top:70px;
-	
+#country-flag{
+	float: none;
+}
 
-	  
+#intro{
+	  	margin-top:210px;  
   }
   
 
@@ -699,9 +722,9 @@ h1{
   
 	   
 #logo{
-	left:12px;
+	left:70px;
 	top:8px;
-
+	margin-bottom: 10px;	
 }
 
   

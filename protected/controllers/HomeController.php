@@ -6,6 +6,7 @@ class HomeController extends Controller
 	 * @return array action filters
 	 */
 		public $layout='//layouts/column2';
+		
 
 
 	public function filters()

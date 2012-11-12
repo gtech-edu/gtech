@@ -47,9 +47,16 @@ return array(
 			'urlFormat'=>'path',
 			//'showScriptName'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				//'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/v',
+				//'<controller:\w+>/<id:\d+>?<t:.+>'=>'page/v',
+				//'home'=>'site',		
+				//'<p:home>' => '/site/index',
+				
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<p:.+>' => 'page/viewPage',
+				//'<controller:\w+>/<action:\w+>/<id:\d+>/<t:\w+>'=>'<controller>/<action>/<t>',
 				
 			),
 		),

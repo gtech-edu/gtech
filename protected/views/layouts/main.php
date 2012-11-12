@@ -4,17 +4,20 @@
 <meta charset="UTF-8">		
 <meta name="language" content="pt-BR" />
   
-    <!--[if (IE 7)|(IE 8)| (IE 9)]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/style_ie.css" />
-<script>
-   (function() {
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = "css/style_ie.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-   })();
-</script>
+<!--[if (IE 7)|(IE 8)]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if (IE 7)|(IE 8)| (IE 9)]>
+	
+	<script>
+	   (function() {
+	      var link = document.createElement("link");
+	      link.rel = "stylesheet";
+	      link.href = "<?php echo Yii::app()->request->baseUrl;?>/css/style_ie.css";
+	      document.getElementsByTagName("head")[0].appendChild(link);
+	   })();
+	</script>
 <![endif]-->
 
 	 <!-- Fav Icons -->
@@ -30,7 +33,7 @@
 		<link href="<?php echo Yii::app()->request->baseUrl;?>/css/main.less" rel="stylesheet/less">
   		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/elements.less" rel="stylesheet/less">
   		*/ ?>
-  		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
+  			<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -107,10 +110,10 @@
 <?php $paginas = Pagina::model()->findAll(array('order'=>'cod_pagina'));?>
 <header>
 		<!-- Start logo -->
-		<a href="#" id="logo">
+		<a href="#" id="logo"> 
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/gtech.png" alt="logo">
 		</a><br>
-		<!-- end logo -->
+		 <!-- end logo -->
 
 <?php //Imagens das bandeiras
 			 	$enFlag = CHtml::image(Yii::app()->request->baseUrl .'/images/british_flag.png', '', array('width'=>25, 'height'=>'25'));
@@ -121,14 +124,14 @@
    <ul> <!-- Menu -->
    		<li><?php echo CHtml::link(CHtml::encode("Home"), array("/home/index"), array("class"=>"aba-href", "id"=>'home'));?></li>
    <?php foreach($paginas as $p):?>
-     	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("pagina/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
+     	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("page/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
     <?php endforeach;?>
     
     <!-- Link para a página em outra língua -->
      <?php if(Yii::app()->language == 'pt'):  //Link e bandeira para a página em inglês ?>
-	 	<li style="float: right"><?php echo CHtml::link($enFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'en'))); ?></li>
+	 	<li id="country-flag"><?php echo CHtml::link($enFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'en'))); ?></li>
 	<?php elseif (Yii::app()->language == 'en') :  //Link e bandeira para a página em português ?>				
-		<li style="float: right"><?php echo CHtml::link($ptFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'pt'))); ?></li>
+		<li id="country-flag"><?php echo CHtml::link($ptFlag,"#", array("submit"=>array('/home/index'), 'params'=>array('_lang'=>'pt'))); ?></li>
 	<?php endif; ?>	
 </ul> 
 </nav>
@@ -145,7 +148,8 @@
 
    <footer>
       <div class="container custom-footer">
-          <div id="FooterTwo">
+      	<div class="row">
+        <div id="FooterTwo">
           <?php if(Yii::app()->user->isGuest):?>
 				<?php echo CHtml::link("Login", array("site/login"));?>
 			<?php else:?>
@@ -155,9 +159,10 @@
 		</div> 
 		  
      <div id="FooterTree">
-	UFRGS - Universidade Federal do Rio Grande do Sul		 
+		UFRGS - Universidade Federal do Rio Grande do Sul		 
      </div>
-	</div>
+ 		</div> <!-- /row -->
+	</div> <!-- /container -->
    </footer>
    <!--end footer-->
 </div><!-- end bg -->

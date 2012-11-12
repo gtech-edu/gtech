@@ -1,12 +1,13 @@
 <?php
 
-class PaginaController extends Controller
+class PageController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column1';
+	public $defaultAction='view';
 
 	/**
 	 * @return array action filters
@@ -27,7 +28,7 @@ class PaginaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','v'),
+				'actions'=>array('index','view','v', 'viewPage'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -68,7 +69,32 @@ class PaginaController extends Controller
 	{
 		
 		$model = $this->loadModel($id);
-		$this->redirect(array('v', 'id'=>$model->cod_pagina, 't'=>$model->titulo));
+		$this->redirect(array('/' .$model->titulo));
+	}
+
+	/*
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionViewPage($p, $ajax=false)
+	{
+
+		if($p == 'home'){
+			$this->redirect(array('/home/'));
+		}
+		if($ajax)
+			$this->layout = false;
+		
+		$model = Pagina::model()->find('titulo ILIKE ' ."'$p'");
+		
+		if($model == null){
+			throw new CHttpException(404,'Not Found.');
+		}
+
+		$this->render('view',array(
+			'model'=>$model,
+			'ajax'=>$ajax,
+		));
 	}
 	
 	/**
