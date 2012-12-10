@@ -5,15 +5,6 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<?php 
-	Yii::app()->clientScript->registerScript('ready', "
-	$(document).ready(function(){
-		$('.view').show('fast');
-	});
-	
-	");
-?>
-
  <!--start intro-->
 
 <div class="container">
@@ -23,7 +14,6 @@ $this->breadcrumbs=array(
  <section id="intro">
 
       <hgroup>
-<!--      <h1></h1>-->	
       <h3><?php echo CHtml::encode($model->titulo);?></h3>
       
       </hgroup>

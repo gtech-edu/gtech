@@ -25,21 +25,22 @@
   	<link rel="shortcut icon" type="image/x-icon"  href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.png" />
 
 		<!--  CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- The 1140px Grid - http://cssgrid.net/ -->
+		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl;?>/css/1140.css" type="text/css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/minimalism.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 		<!-- User Styles -->
+		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
 		<?php /*
 		<link href="<?php echo Yii::app()->request->baseUrl;?>/css/main.less" rel="stylesheet/less">
   		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/elements.less" rel="stylesheet/less">
   		*/ ?>
-  			<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
+  			
 
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-		<!-- The 1140px Grid - http://cssgrid.net/ -->
-		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl;?>/css/1140.css" type="text/css" media="screen" />
 	
 	<!-- Scripts -->
 	
@@ -76,10 +77,6 @@
 			window : win,
 			input : field_name
 		});		
-	}
-	
-	function saveConfirm(){
-	//	confirm('Voce fez alteracoes');
 	}
 	</script>
 

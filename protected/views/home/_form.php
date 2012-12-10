@@ -2,12 +2,13 @@
 Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl ."/js/tiny_mce/tiny_mce.js");
 Yii::app()->clientScript->registerScript('text-areas',"
 		tinyMCE.init({
-								mode : 'textareas',
-								theme : 'advanced',
-								width: '100%',
-        						height: '450',
-        						relative_urls : false,
-        						file_browser_callback : 'filebrowser'
+								mode : 'textareas'
+								, theme : 'advanced'
+								, width: '100%'
+        						, height: '450'
+        						, relative_urls : false
+        						, file_browser_callback : 'filebrowser'
+        						, content_css: '/gtech/css/minimalism.css'
 							});
 	");
 ?>
