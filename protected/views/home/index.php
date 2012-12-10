@@ -5,16 +5,6 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<?php 
-	Yii::app()->clientScript->registerScript('ready', "
-	$(document).ready(function(){
-		$('.view').show('fast');
-	});
-	
-	");
-?>
-
-
  <section id="intro">
 
       <hgroup>

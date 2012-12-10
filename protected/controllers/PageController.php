@@ -124,6 +124,7 @@ class PageController extends Controller
 	public function actionCreate()
 	{
 		$model=new Pagina;
+		$this->layout='//layouts/column2';
 
 		$model->lang = Yii::app()->language;
 
@@ -151,6 +152,8 @@ class PageController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		
+		$this->layout='//layouts/column2';
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -162,7 +165,6 @@ class PageController extends Controller
 			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->cod_pagina));
-				$this->redirect(array('view','id'=>1));
 		}
 
 		$this->render('update',array(

@@ -9,18 +9,8 @@ $this->menu=array(
 	array('label'=>'Gerenciar Usuários', 'url'=>array('users/admin')),
 );
 ?>
-<?php 
-	Yii::app()->clientScript->registerScript('ready', "
-	$(document).ready(function(){
-		$('.view').show('fast');
-	});
-	
-	");
-?>
-
 
 <div class="container">
-<div class="row">
 	<div class="row">
 	 <section id="intro">
 	      <hgroup>

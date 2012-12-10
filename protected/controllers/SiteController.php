@@ -32,6 +32,36 @@ class SiteController extends Controller
 		$this->redirect(array('/home'));
 		
 	}
+	
+	
+	/**
+	 * Renderiza a pagina em ingles
+	 * 
+	 */
+	public function actionEn()
+		{
+		 		$app = Yii::app();
+		 		$app->session['_lang'] = 'en';
+		        $app->language = $app->session['_lang'];
+			$this->redirect(array('/home'));
+			
+		}
+		
+	/**
+	 * Renderiza a pagina em ingles
+	 * 
+	 */
+	public function actionPt()
+		{
+		 		$app = Yii::app();
+		 		$app->session['_lang'] = 'pt';
+		        $app->language = $app->session['_lang'];
+			$this->redirect(array('/home'));
+			
+		}
+	
+	
+	
 
 	/**
 	 * This is the action to handle external exceptions.

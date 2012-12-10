@@ -84,17 +84,23 @@ class HomeController extends Controller
 		
 		//Carrega conteudo do arquivo
 		$colunm_left = file_get_contents($file);
+		if(isset($_POST['Pagina'])){
+			$this->redirect('http://www.google.com');
+		}
 
 		if(isset($_POST['Pagina']))
 		{	
+			
 			//Pega conteudo do arquivo
 			$colunm_left = $_POST['Pagina']['conteudo'];
 			//Escreve conteudo no arquivo
 			$result = file_put_contents($file, $colunm_left);
 			if($result)
-				$this->redirect(array('/home/index')); //Redireciona para pagina principal
+				$this->redirect(array('/')); //Redireciona para pagina principal
+			
 			
 		}
+
 		$dir = Yii::getPathOfAlias('application.data.pages.' .Yii::app()->language);
 
 		$this->render('_form',array(

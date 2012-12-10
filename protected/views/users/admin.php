@@ -5,21 +5,11 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Adicionar Usuário', 'url'=>array('create')),
-	array('label'=>'Gerenciar Páginas', 'url'=>array('/pagina/admin')),
+	array('label'=>'Gerenciar Páginas', 'url'=>array('/admin')),
 );
 ?>
 
-<?php 
-	Yii::app()->clientScript->registerScript('ready', "
-	$(document).ready(function(){
-		$('.view').show('fast');
-	});
-	
-	");
-?>
-
 <div class="container">
-<div class="row">
 	<div class="row">
 	 <section id="intro">
 	      <hgroup>

@@ -46,7 +46,7 @@ $this->breadcrumbs=array(
 		
 			if(!Yii::app()->user->isGuest){
 			echo "<hr>";
-			echo CHtml::link("Editar", array("/pagina/update/" .$model->cod_pagina), array("class"=>"button", 'style'=>"color: white; text-decoration: none;"));
+			echo CHtml::link("Editar", array("/page/update/" .$model->cod_pagina), array("class"=>"button", 'style'=>"color: white; text-decoration: none;"));
 	}
 	?>
 </section>

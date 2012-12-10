@@ -11,30 +11,6 @@ Yii::app()->clientScript->registerScript('text-areas',"
 							});
 	");
 ?>
-
-<script type="text/javascript">
-function filebrowser(field_name, url, type, win) {
-	
-	fileBrowserURL = "http://gtech.ufrgs.br/pdw/index.php?filter=" + type;
-			
-	tinyMCE.activeEditor.windowManager.open({
-		title: "PDW File Browser",
-		url: fileBrowserURL,
-		width: 950,
-		height: 650,
-		inline: 0,
-		maximizable: 1,
-		close_previous: 0
-	},{
-		window : win,
-		input : field_name
-	});		
-}
-
-function saveConfirm(){
-//	confirm('Voce fez alteracoes');
-}
-</script>
 <!--start intro-->
 <div class="container">
 <div class="row">
@@ -55,11 +31,12 @@ function saveConfirm(){
 )); ?>
 
 	<div class="row">
-	 <?php echo CHtml::textArea('Paginga[conteudo]', $conteudo, array('id'=>'Paginga_conteudo')); ?>
+	 <?php echo CHtml::textArea('Pagina[conteudo]', $conteudo, array('id'=>'Pagina_conteudo')); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::button('Cancelar', array('submit' => array('/home'))); ?>
+		<?php echo CHtml::button('Cancelar', array('submit' => array('/'))); ?>
+		<?php echo CHtml::button('Save', array('submit' => array('/home/updateLeft'))); ?>
 		<?php echo CHtml::submitButton('Salvar'); ?>
 	</div>
 

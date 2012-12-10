@@ -9,6 +9,16 @@ $this->menu=array(
 );
 ?>
 
-<h1>Adicionar Página</h1>
+<!--start intro-->
+<div class="container">
+<div class="row">
+ <section id="intro">
+      <hgroup>
+	      <h3>Adicionar Página</h3>
+      </hgroup>
+   </section>
+</div>
+</div>
+<!--end intro-->   
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

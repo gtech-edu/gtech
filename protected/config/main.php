@@ -48,11 +48,16 @@ return array(
 			//'showScriptName'=>false,
 			'rules'=>array(				
 				'<controller:\w+>/<id:\d+>'=>'<controller>/v',
-								
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'en'=>'/site/en',
+				'pt'=>'/site/pt',
+				'home'=>'/home/index',
+				'inicio'=>'/home/index',
+				'admin'=>'/page/admin',
 				'<p:.+>' => 'page/viewPage',
-				''=>'/home/index',
+				
+				
 				
 				
 			),

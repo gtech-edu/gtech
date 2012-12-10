@@ -10,6 +10,10 @@ $this->menu=array(
 );
 ?>
 
+ <?php foreach($paginas as $p):?>
+     	<li><?php echo CHtml::link(CHtml::encode($p->titulo), array("page/view", 'id'=>$p->cod_pagina), array("class"=>"aba-href", "id"=>$p->cod_pagina));?></li>
+    <?php endforeach;?>
+
 <h1>Editar Usuário</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
