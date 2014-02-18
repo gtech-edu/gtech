@@ -5,8 +5,15 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Login</h1>
-
+<div class="container">
+	<div class="row">
+	 <section id="intro">
+	      <hgroup>
+	      <h3>Login</h3>
+	      </hgroup>
+	   </section>
+	</div>
+</div>
 	
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(

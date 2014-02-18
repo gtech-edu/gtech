@@ -15,17 +15,15 @@ $this->breadcrumbs=array(
 ?>
 
 
- <section id="intro">
-
-      <hgroup>
-
-      <h1>Bem Vindo</h1>
-
-      <h2></h2>
-
-      </hgroup>
-
-   </section>
+ <div class="container">
+	<div class="row">
+	 <section id="intro">
+	      <hgroup>
+	      <h3>Bem Vindo</h3>
+	      </hgroup>
+	   </section>
+	</div>
+</div>
 
 			
 <div class="holder_content">
