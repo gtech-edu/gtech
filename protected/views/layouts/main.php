@@ -39,14 +39,6 @@
   		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/elements.less" rel="stylesheet/less">
   		*/ ?>
   			
-
-
-	
-	
-	<!-- Scripts -->
-	
-		
-	
 	<title><?php echo CHtml::encode("GTech"); ?></title>
 		
 	<!-- Google Analytics -->
@@ -82,7 +74,7 @@
 			    linkType: "direct",
 			    multiselect: false,
 			    extensions: ext[type],
-		};);
+		});
 
 	}
 	</script>
