@@ -30,6 +30,7 @@
 		<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl;?>/css/1140.css" type="text/css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl;?>/css/minimalism.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="u2evq3za0s0i84i"></script>
 
 		<!-- User Styles -->
 		<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.min.css" rel="stylesheet">
@@ -60,23 +61,29 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
+
 	<script type="text/javascript">
 	function filebrowser(field_name, url, type, win) {
-		
-		fileBrowserURL = "http://gtech.ufrgs.br/pdw/index.php?filter=" + type;
-				
-		tinyMCE.activeEditor.windowManager.open({
-			title: "PDW File Browser",
-			url: fileBrowserURL,
-			width: 950,
-			height: 650,
-			inline: 0,
-			maximizable: 1,
-			close_previous: 0
-		},{
-			window : win,
-			input : field_name
-		});		
+
+		var ext = {
+			'file': null,
+			'image': ['images', 'video'],
+			'flash': ['video', 'audio'],
+		}
+
+	    Dropbox.choose( {
+			    success: function(files) {
+			        win.document.getElementById(field_name).value = files[0].link; 
+			    },
+			    cancel: function() {
+			    	win.document.getElementById(field_name).value = url;
+			    },
+
+			    linkType: "direct",
+			    multiselect: false,
+			    extensions: ext[type],
+		};);
+
 	}
 	</script>
 
