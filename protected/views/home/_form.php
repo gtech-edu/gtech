@@ -37,7 +37,6 @@ Yii::app()->clientScript->registerScript('text-areas',"
 
 	<div class="row buttons">
 		<?php echo CHtml::button('Cancelar', array('submit' => array('/'))); ?>
-		<?php echo CHtml::button('Save', array('submit' => array('/home/updateLeft'))); ?>
 		<?php echo CHtml::submitButton('Salvar'); ?>
 	</div>
 
