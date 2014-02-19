@@ -84,9 +84,6 @@ class HomeController extends Controller
 		
 		//Carrega conteudo do arquivo
 		$colunm_left = file_get_contents($file);
-		if(isset($_POST['Pagina'])){
-			$this->redirect('http://www.google.com');
-		}
 
 		if(isset($_POST['Pagina']))
 		{	

@@ -72,7 +72,7 @@ return array(
         ),
 		
 		'db'=>array(
-			'connectionString' => 'pgsql:host=localhost;port=5432;dbname=gtech',
+			'connectionString' => 'pgsql:host=localhost;port=5432;dbname=gtech_pt',
 			'emulatePrepare' => true,
 			'username' => 'postgres',
 			'password' => 'gorder',
